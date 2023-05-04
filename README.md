@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+<h1 align="center">TextUtils</h1>
+<p align="center">
+<img width="40%" src="https://user-images.githubusercontent.com/94471189/193782622-db0071f8-122e-4909-83a8-fe5da257febc.png" alt="main page">
+</p>
+<h3>
+TextUtils is a text analyzer, word counter and converter made with React.
+</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It has the following features:
 
-## Available Scripts
+- Convert Text to UpperCase
+- Convert Text to LowerCase
+- Convert Text to SentenceCase
+- Encode to base64
+- Clear Text
+- Extract Numbers
+- Extract Links
+- Listen text and stop it
+- Remove white space
+- Remove special characters
+- Copy to clipboard
+- Reverse text
+- Change text
+- Undo action
+- Redo action
+- Preview input text
+- Count characters, words, statements, questions, exclamations
 
-In the project directory, you can run:
+## Screenshot
 
-### `npm start`
+🌝 **Light Mode:**
+![image](https://user-images.githubusercontent.com/79099734/189593645-c9051b90-9cd9-4662-95ed-a7dda2bd6e4b.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🌚 **Dark Mode:**
+![image](https://user-images.githubusercontent.com/79099734/189593798-94357cb9-40ec-45e1-a9ae-78c364a0780f.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## Contributing 👨‍💻
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Contributions make the open source community such an amazing place to learn, inspire, and create.
+- Any contributions you make are **greatly appreciated**.
+- Check out our [contribution guidelines](/CONTRIBUTING.md) for more information.
 
-### `npm run build`
+## License 🛡️
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+TextUtils is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Open Source Programs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ <a href="https://hacktoberfest.com/">
+ <img width="1200" alt="Email Banners-Dark" src="https://user-images.githubusercontent.com/79099734/189589410-ca17afb8-5855-4316-918a-054f27594809.png">
+ </a>
 
-### `npm run eject`
+## 😎 Project Maintainers
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<table>
+  <tr>
+<td align="center"><a href="https://github.com/Susmita-Dey"><img src="https://avatars.githubusercontent.com/u/79099734?v=4" width="100px;" alt=""/><br /><sub><b>Susmita Dey</b></sub></a></td>
+<td align="center"><a href="https://github.com/imaaquibali"><img src="https://avatars.githubusercontent.com/u/84700316?v=4" width="100px;" alt=""/><br /><sub><b>Aaquib Ali</b></sub></a></td>
+  </tr>
+</table>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<h2>Project Contributors⭐</h2>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<a href="https://github.com/Susmita-Dey/TextUtils/graphs/contributors" align="center">
+  <img src="https://contrib.rocks/image?repo=Susmita-Dey/TextUtils" /> 
+</a>
+<hr>
+<p align="center">
+  Show some :heart: by starring the repository.
+</p>
