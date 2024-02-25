@@ -1,4 +1,4 @@
-# TextMaster: Your Text Processing Companion
+# TextMaster: Your Text Processing Companion - Deployed Link -  [TextMaster](https://textmaster-uk01.netlify.app/)
 
 Welcome to the GitHub repository of our project, **TextMaster**. This project is a ReactJS website built primarily to perform various operations on regular typed text.
 
@@ -26,7 +26,8 @@ TextMaster is free to use and browser compatible.
 
 ## Deployment
 
-This project is deployed on Netlify.
+This project is deployed on Netlify. Deployed Link -  [TextMaster](https://textmaster-uk01.netlify.app/)
+
 
 ## Contributing
 
@@ -40,4 +41,6 @@ Currently, two official plugins are available:
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# checkmate
+
+Made with ❤️ by [Ravindra Singh Rayal](https://github.com/Ravindra-uk01)
+
