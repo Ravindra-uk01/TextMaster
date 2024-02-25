@@ -1,4 +1,4 @@
-# TextMaster: Your Text Processing Companion - Deployed Link -  [TextMaster](https://textmaster-uk01.netlify.app/)
+# TextMaster: Your Text Processing Companion - [TextMaster](https://textmaster-uk01.netlify.app/)
 
 Welcome to the GitHub repository of our project, **TextMaster**. This project is a ReactJS website built primarily to perform various operations on regular typed text.
 
