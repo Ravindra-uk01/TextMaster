@@ -62,7 +62,7 @@ export default function Navbar() {
               className="form-check-label"
               htmlFor="flexSwitchCheckDefault"
             >
-              Enable Dark Mode
+              Enable {theme.mode} Mode
             </label>
           </div>
         </div>

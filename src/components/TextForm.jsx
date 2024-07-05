@@ -1,18 +1,16 @@
-import  { useEffect, useState } from "react";
-import {useSelector, useDispatch} from 'react-redux'
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { textActions } from "../store/features/text/textSlice";
 import Button from "./ui/Button";
 
-
 export default function TextForm(props) {
-
   const textState = useSelector((state) => state.text);
-  const themeState  = useSelector((state) => state.theme);
+  const themeState = useSelector((state) => state.theme);
   const dispatch = useDispatch();
-  const [isListening, setIsListening] = useState(false)
-  
+  const [isListening, setIsListening] = useState(false);
+
   const handleOnChange = (event) => {
-    dispatch(textActions.updateText({text : event.target.value}))
+    dispatch(textActions.updateText({ text: event.target.value }));
   };
 
   // for converting to the upperCase
@@ -21,78 +19,78 @@ export default function TextForm(props) {
   };
 
   // for converting to lowerCase
-  const handleLowClick = () =>{
+  const handleLowClick = () => {
     dispatch(textActions.lowerCase());
-  }
+  };
 
   // for converting to sentence case
-  const handleSentenceClick = () =>{
+  const handleSentenceClick = () => {
     dispatch(textActions.sentenceCase());
-  }
+  };
 
   // for converting to the encode base64
-  const handlebase64Click = () =>{
-    dispatch(textActions.base64())
-  }
+  const handlebase64Click = () => {
+    dispatch(textActions.base64());
+  };
 
-  // for clearing text 
-  const handleClearClick = () =>{
-    dispatch(textActions.clear())
-  }
+  // for clearing text
+  const handleClearClick = () => {
+    dispatch(textActions.clear());
+  };
 
   // for extracting the number
-  const handleNumExtract = () =>{
-    dispatch(textActions.extractNumbers())
-  }
+  const handleNumExtract = () => {
+    dispatch(textActions.extractNumbers());
+  };
 
-  // for extracting link 
-  const handleLinkExtract = ()=>{
-    dispatch(textActions.extractLink())
-  }
+  // for extracting link
+  const handleLinkExtract = () => {
+    dispatch(textActions.extractLink());
+  };
 
-  // for extracting text 
-  const handletextExtract = ()=>{
-    dispatch(textActions.extractText())
-  }
+  // for extracting text
+  const handletextExtract = () => {
+    dispatch(textActions.extractText());
+  };
 
   // for removing whitespaces
-  const handleRemoveWhiteSpaceClick = () =>{
-    dispatch(textActions.removeWhiteSpace())
-  }
+  const handleRemoveWhiteSpaceClick = () => {
+    dispatch(textActions.removeWhiteSpace());
+  };
 
   // for removing special characters
-  const handleRemoveSpecialCharacters = () =>{
-    dispatch(textActions.removeSpecialCharacters())
-  }
+  const handleRemoveSpecialCharacters = () => {
+    dispatch(textActions.removeSpecialCharacters());
+  };
 
   // copying text to clipboard
   const handleCopyClick = () => {
     navigator.clipboard.writeText(textState.text);
   };
 
-  // reversing the text 
-  const handlereverseClick = ()=>{
-    dispatch(textActions.reverseText())
-  }
+  // reversing the text
+  const handlereverseClick = () => {
+    dispatch(textActions.reverseText());
+  };
 
   // for replacing the text
   const replace = () => {
-    const word = prompt('Enter the string to replace.');
-    const newWord = prompt('Enter the string to replace with.');
+    const word = prompt("Enter the string to replace.");
+    const newWord = prompt("Enter the string to replace with.");
     dispatch(textActions.replaceText({ word, newWord }));
   };
 
-  // for handling undo 
-  const handleUndo = () =>{
-    dispatch(textActions.undo())
-  }
+  // for handling undo
+  const handleUndo = () => {
+    dispatch(textActions.undo());
+  };
 
   // for handling redo
-  const handleRedo = () =>{
-    dispatch(textActions.redo())
-  }
+  const handleRedo = () => {
+    dispatch(textActions.redo());
+  };
 
-  // for pasting to clipboard 
+  // for pasting to clipboard
   let pasteSupported = false;
   if (navigator.clipboard && navigator.clipboard.readText) {
     pasteSupported = true;
@@ -105,18 +103,18 @@ export default function TextForm(props) {
         dispatch(textActions.updateText({ text: textState.text + text }));
       })
       .catch((err) => {
-        console.log('Something went wrong', err);
+        console.log("Something went wrong", err);
       });
   };
 
-  // for handling text which will speak the text 
+  // for handling text which will speak the text
   const handleSpeakClick = (event) => {
     let el = event.currentTarget;
-    if (el.innerHTML === 'Listen Now') el.innerHTML = 'Stop Now';
-    else el.innerHTML = 'Listen Now';
+    if (el.innerHTML === "Listen Now") el.innerHTML = "Stop Now";
+    else el.innerHTML = "Listen Now";
 
     // el.innerHTML has already been changed here, hence checking for the opposite value
-    if (el.innerHTML === 'Stop Now') {
+    if (el.innerHTML === "Stop Now") {
       let msg = new SpeechSynthesisUtterance();
       msg.text = textState.text;
       window.speechSynthesis.speak(msg);
@@ -136,7 +134,7 @@ export default function TextForm(props) {
     mic = new SpeechRecognition();
     mic.continuous = true;
     mic.interimResults = true;
-    mic.lang = 'en-US';
+    mic.lang = "en-US";
   }
 
   useEffect(() => {
@@ -149,16 +147,16 @@ export default function TextForm(props) {
     }
     if (isListening) {
       mic.start();
-      console.log('start');
+      console.log("start");
     } else {
       mic.stop();
-      console.log('stopped');
+      console.log("stopped");
     }
     mic.onresult = (event) => {
       const transcript = Array.from(event.results)
         .map((result) => result[0])
         .map((result) => result.transcript)
-        .join('');
+        .join("");
       dispatch(textActions.updateText({ text: textState.text + transcript }));
       mic.onerror = (event) => {
         console.log(event.error);
@@ -287,8 +285,7 @@ export default function TextForm(props) {
           if (supported === false) {
             return;
           }
-
-          console.log('action is ', action)
+          // console.log("action is ", action);
 
           return <Button key={action.label} action={action} />;
         })}
@@ -302,12 +299,11 @@ export default function TextForm(props) {
         <h2>Your Text Summary</h2>
         <p>
           <b>
-            {
-              textState.text
-                .replace(/\s/)
-                .split(" ")
-                .filter((value) => value !== "").length
-            }
+            {textState.text
+              .trim()
+              .split(" ")
+              .filter((value) => value !== "").length
+              }
           </b>{" "}
           words,
           <b> {textState.text.trim().length}</b> characters,
